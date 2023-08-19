@@ -3,6 +3,7 @@ A clean pfSense theme with sidebar navigation
 
 # Installation
 Download `clearblue.css` to `/usr/local/www/css/`
+
 Navigate to System -> General Setup -> webConfigurator and change `Theme` to `clearblue`
 
 # Screenshots
