@@ -1,0 +1,47 @@
+@media (min-width: 768px) {
+    .footer {
+        bottom: 0;
+        color: #FFFFFF;
+        left: 0;
+        position: fixed;
+        width: $sidebar-width;
+        z-index: 1040;
+
+        .text-muted {
+            color: inherit;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        .container {
+            margin: 0;
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        background-color: $footer-bg;
+        margin-top: 3em;
+        padding: 0.5em 0;
+        text-align: center;
+
+        a {
+            color: $sidebar-bg;
+        }
+
+        .text-muted {
+            color: #333333;
+            margin: 0;
+
+            .fa {
+                padding-top: 0.3em;
+            }
+        }
+    }
+}
+

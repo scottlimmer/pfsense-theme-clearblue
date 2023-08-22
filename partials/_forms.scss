@@ -1,0 +1,36 @@
+.form-horizontal {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.col-sm-10 > .form-control,
+.col-sm-10 .input-group {
+    width: calc(50% - 15px);
+}
+
+.input-group {
+    display: flex;
+
+    .form-control {
+        width: auto;
+    }
+
+    .form-control:first-child {
+        width: 100%;
+    }
+}
+
+.input-group-addon {
+    padding: 10px 1.3em 0 1em;
+}
+
+.checkbox {
+    &.multi label {
+        display: block;
+        margin-bottom: 0.5em;
+
+        input[type="checkbox"] {
+            margin-top: 2px;
+        }
+    }
+}

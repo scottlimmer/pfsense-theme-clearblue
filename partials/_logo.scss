@@ -1,0 +1,35 @@
+.navbar-header {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    padding: 0.5em 0 1em;
+    text-align: center;
+    width: auto;
+}
+
+.navbar-brand {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+
+    path {
+        fill: $logo-fg;
+    }
+
+    span {
+        display: block;
+        line-height: 0.3em;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-header {
+        padding: 0;
+    }
+
+    .navbar-brand {
+        height: auto;
+        margin-top: 6px;
+        padding: 0;
+    }
+}

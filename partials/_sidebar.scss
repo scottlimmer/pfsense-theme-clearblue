@@ -1,0 +1,120 @@
+.navbar-inverse {
+    background-color: $sidebar-bg;
+
+    .navbar-nav > li > a {
+        border-bottom: 2px solid $sidebar-bg;
+        color: $sidebar-fg;
+    }
+
+    .nav > li > a:focus,
+    .nav > li > a:hover {
+        border-bottom-color: $sidebar-fg;
+    }
+
+    .navbar-nav > .open {
+        & > a,
+        & > a:focus,
+        & > a:hover {
+            background: $sidebar-active-bg;
+        }
+    }
+}
+
+.navbar-nav {
+    float: none;
+
+    & > li {
+        display: block;
+        float: none;
+
+        & > .dropdown-menu {
+            border: 0;
+            bottom: 0;
+            left: 150px;
+            overflow: scroll;
+            position: fixed;
+            top: 0;
+
+            li a {
+                padding: 10px 15px;
+            }
+        }
+
+        a {
+            padding: 10px $gutter 10px;
+        }
+    }
+}
+
+.caret {
+    border-width: 5px 5px 0 5px;
+    position: absolute;
+    right: 15px;
+    top: 18px;
+}
+
+.navbar-right {
+    float: none !important;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .navbar-inverse {
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        width: $sidebar-width;
+
+        .container {
+            box-shadow: none;
+            padding: 0;
+            width: auto;
+        }
+
+        & + .container {
+            margin: 0 $gutter 0 $sidebar-width + $gutter;
+            max-width: calc(100% - $sidebar-width - ($gutter * 2)) !important;
+            padding: 15px 0;
+            position: relative;
+            width: auto;
+            z-index: 0;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse {
+        & + .container {
+            margin-top: 70px;
+        }
+
+        .navbar-toggle {
+            border-color: transparent;
+            margin-top: 12px;
+        }
+
+        .navbar-nav .open .dropdown-menu > li {
+            & > a {
+                border-bottom: 2px solid transparent;
+                color: #FFFFFF;
+            }
+
+            & > a:focus,
+            & > a:hover {
+                border-color: #FFFFFF;
+            }
+        }
+    }
+
+    .navbar .navbar-collapse {
+        border-color: $sidebar-active-bg;
+        box-shadow: none;
+        max-height: 500px;
+
+        > ul {
+            margin: 0 -15px;
+        }
+    }
+}

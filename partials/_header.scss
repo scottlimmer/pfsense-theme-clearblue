@@ -1,0 +1,55 @@
+.header {
+    background-color: $header-bg;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    background: transparent;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 10px 15px;
+
+    & > li + li::before {
+        color: $link-fg;
+        content: "\2B9E";
+        display: inline-block;
+        padding: 0 10px 0 10px;
+        vertical-align: middle;
+    }
+}
+
+.context-links {
+    align-items: center;
+    display: flex;
+    margin: 0 0.4em 0 0;
+    padding: 0;
+
+    li {
+        display: flex;
+        list-style: none;
+
+        a {
+            background: $header-widget-bg;
+            border-radius: 3px;
+            color: $header-widget-fg;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 2px;
+            padding: 0.3em 0;
+            text-align: center;
+            width: 30px;
+        }
+
+        a:hover, a:active {
+            background-color: $header-widget-hover-bg;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-columns: auto min-content;
+    }
+}

@@ -1,0 +1,43 @@
+table {
+    caption {
+        padding: 8px;
+    }
+}
+
+.help-block {
+    td, th {
+        padding: 3px;
+    }
+}
+
+table[data-sortable].sortable-theme-bootstrap {
+    font-family: inherit;
+
+    thead th {
+        border-bottom: 0;
+    }
+}
+
+.table > thead > tr > th {
+    border-bottom-width: 1px;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+    border-top: 1px solid #EEEEEE;
+}
+
+@media (max-width: 767px) {
+    .table-responsive > .table > tbody > tr > td,
+    .table-responsive > .table > tbody > tr > th,
+    .table-responsive > .table > tfoot > tr > td,
+    .table-responsive > .table > tfoot > tr > th,
+    .table-responsive > .table > thead > tr > td,
+    .table-responsive > .table > thead > tr > th {
+        white-space: normal;
+    }
+}

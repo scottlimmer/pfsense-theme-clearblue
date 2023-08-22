@@ -1,0 +1,17 @@
+/** pfSense specific overrides */
+
+#tpl, #tpr {
+    display: none !important;
+}
+
+#uptodate {
+    .text-warning {
+        color: $sidebar-bg;
+    }
+}
+
+#pkgtbl {
+    a {
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,16 @@
+.progress {
+    background-color: $progress-bg;
+    margin-bottom: 0;
+
+    & + span {
+        color: #FFFFFF;
+        margin-top: -19px;
+        padding-left: 0.3em;
+        position: absolute;
+    }
+}
+
+.progress-bar {
+    background-color: $progress-fg;
+    padding: 2px 0;
+}

@@ -1,0 +1,12 @@
+.dl-horizontal {
+    display: grid;
+    grid-template-columns: max-content auto;
+
+    dt, dd {
+        padding: 0.3em;
+    }
+
+    dd {
+        margin-left: 1em;
+    }
+}

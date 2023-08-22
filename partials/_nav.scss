@@ -1,0 +1,52 @@
+.nav > li > a {
+    color: $nav-button-fg;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+    background-color: $nav-button-bg;
+    color: $nav-button-fg;
+}
+
+.nav-pills {
+    margin-bottom: 1em;
+
+    & > li > a {
+        border-bottom: 5px solid transparent;
+        border-radius: 0;
+    }
+
+    & > li {
+        & a:focus,
+        & a:hover {
+            background-color: transparent;
+            border-bottom: 5px solid $nav-button-lowlight;
+        }
+    }
+
+    & > li.active > a {
+        background-color: $nav-button-bg;
+        border-bottom-color: $nav-button-highlight;
+        color: $nav-button-fg;
+        font-weight: bold;
+    }
+
+    & > li.active {
+        & > a:focus,
+        & > a:hover {
+            background-color: $nav-button-bg;
+            border-bottom: 5px solid $nav-button-lowlight;
+            color: $nav-button-fg;
+        }
+    }
+}
+
+.nav-tabs {
+    margin-bottom: 1em;
+}
+
+nav.action-buttons {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: right;
+}
