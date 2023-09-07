@@ -11,6 +11,11 @@
     display: inline-block;
     float: none;
     margin: 0 auto;
+    max-width: 150px;
+
+    &.factory {
+        display: block;
+    }
 
     path {
         fill: $logo-fg;
@@ -19,6 +24,14 @@
     span {
         display: block;
         line-height: 0.3em;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar > .container  .navbar-brand {
+        &.factory {
+            margin-left: 0;
+        }
     }
 }
 
@@ -31,5 +44,9 @@
         height: auto;
         margin-top: 6px;
         padding: 0;
+
+        &.factory {
+            padding-top: 4px;
+        }
     }
 }

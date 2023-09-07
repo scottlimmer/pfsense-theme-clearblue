@@ -146,6 +146,10 @@ a {
   display: inline-block;
   float: none;
   margin: 0 auto;
+  max-width: 150px;
+}
+.navbar-brand.factory {
+  display: block;
 }
 .navbar-brand path {
   fill: #FFFFFF;
@@ -155,6 +159,11 @@ a {
   line-height: 0.3em;
 }
 
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand.factory {
+    margin-left: 0;
+  }
+}
 @media (max-width: 767px) {
   .navbar-header {
     padding: 0;
@@ -163,6 +172,9 @@ a {
     height: auto;
     margin-top: 6px;
     padding: 0;
+  }
+  .navbar-brand.factory {
+    padding-top: 4px;
   }
 }
 .header {
