@@ -62,7 +62,29 @@ a {
 
 .navbar-right {
   float: none !important;
-  margin: 0;
+  margin: 1em 0 0;
+}
+.navbar-right .dropdown a {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+.navbar-right .dropdown a::before {
+  display: inline-block;
+  flex-grow: 1;
+}
+.navbar-right .dropdown a[data-target="#notices"]::before {
+  content: "Notices";
+}
+.navbar-right .dropdown a[data-target="#notices"] i.fa {
+  display: none;
+}
+.navbar-right .dropdown a[data-target="#notices"] .badge {
+  background-color: #82a5c4;
+  margin-right: -3px;
+}
+.navbar-right .dropdown a[href$=logout]::before {
+  content: "Logout";
 }
 
 @media (min-width: 768px) {
