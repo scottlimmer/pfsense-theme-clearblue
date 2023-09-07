@@ -77,7 +77,6 @@
             margin: 0 $gutter 0 $sidebar-width + $gutter;
             max-width: calc(100% - $sidebar-width - ($gutter * 2)) !important;
             padding: 15px 0;
-            position: relative;
             width: auto;
             z-index: 0;
         }

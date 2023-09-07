@@ -83,7 +83,6 @@ a {
     margin: 0 15px 0 165px;
     max-width: calc(100% - 150px - 30px) !important;
     padding: 15px 0;
-    position: relative;
     width: auto;
     z-index: 0;
   }
