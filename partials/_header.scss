@@ -12,10 +12,11 @@
 
     & > li + li::before {
         color: $link-fg;
-        content: "\2B9E";
+        content: "\f0da";
         display: inline-block;
         padding: 0 10px 0 10px;
         vertical-align: middle;
+        font: normal normal normal 20px/1 FontAwesome;
     }
 }
 
