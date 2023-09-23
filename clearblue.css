@@ -1,13 +1,6 @@
 @import url("https://fonts.bunny.net/css?family=nunito-sans:400");
 @import url("/vendor/bootstrap/css/bootstrap.min.css");
 @import url("/vendor/jquery-ui/jquery-ui-1.12.1.min.css");
-@font-face {
-  font-family: "FontAwesome";
-  src: url("/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0");
-  src: url("/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 body {
   font-family: "Nunito Sans", sans-serif;
 }
@@ -211,7 +204,8 @@ a {
   display: inline-block;
   padding: 0 10px 0 10px;
   vertical-align: middle;
-  font: normal normal normal 11px/1 FontAwesome;
+  font: normal normal normal 11px/1 "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 .context-links {
