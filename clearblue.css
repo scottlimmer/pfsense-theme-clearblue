@@ -42,9 +42,19 @@ a {
   border: 0;
   bottom: 0;
   left: 150px;
-  overflow: scroll;
+  overflow-y: auto;
   position: fixed;
   top: 0;
+  /**
+      This is only present as Firefox doesn't consider the scrollbar
+      when determining width of a fixed position container.
+      https://bugzilla.mozilla.org/show_bug.cgi?id=764076
+      Setting the scrollbar-width to thin brings it under the width of
+      the gutter of the .dropdown-menu avoiding text cutoff / x-axis
+      overflow.
+      scrollbar-width property is also only supported by Firefox at 09-2023
+   */
+  scrollbar-width: thin;
 }
 .navbar-nav > li > .dropdown-menu li a {
   padding: 10px 15px;
@@ -494,3 +504,5 @@ table[data-sortable].sortable-theme-bootstrap thead th {
 #pkgtbl a {
   white-space: nowrap;
 }
+
+/*# sourceMappingURL=clearblue.css.map */
