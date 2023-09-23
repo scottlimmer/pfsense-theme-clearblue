@@ -12,10 +12,12 @@
 
     & > li + li::before {
         color: $link-fg;
-        content: "\2B9E";
+        content: "\f054";
         display: inline-block;
         padding: 0 10px 0 10px;
         vertical-align: middle;
+        font: normal normal normal 11px/1 "Font Awesome 5 Free";
+        font-weight: 900;
     }
 }
 
