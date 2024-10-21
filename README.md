@@ -2,9 +2,12 @@
 A clean pfSense theme with sidebar navigation
 
 # Installation
-Download `clearblue.css` to `/usr/local/www/css/`
+1. Run the installer script from a shell prompt 
+```
+curl -s https://raw.githubusercontent.com/scottlimmer/pfsense-theme-clearblue/refs/heads/main/install.sh | bash
+```
 
-Navigate to System -> General Setup -> webConfigurator and change `Theme` to `clearblue`
+2. Navigate to `System -> General Setup -> webConfigurator` and change `Theme` to `clearblue`
 
 # Screenshots
 <img src="https://github.com/scottlimmer/pfsense-theme-clearblue/assets/23328069/1835aed9-ace8-4201-8370-7f15e48fbdd7" alt="desktop">
