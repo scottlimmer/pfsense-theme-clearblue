@@ -6,6 +6,14 @@
   padding: 0 2px;
 }
 
+#iform_stats .fa-info {
+  border-radius: 12px;
+  padding: 6px 10px;
+  background: #DCE8F3;
+  margin-right: 6px;
+  font-size: 14px;
+}
+
 .btn {
   & > .fa,
   & > .fa-solid,
@@ -20,12 +28,7 @@
     border-color: variables.$sidebar-bg;
   }
 
-  .fa-info {
-    border-radius: 12px;
-    padding: 6px 10px;
-    background: #DCE8F3;
-    margin-right: 6px;
-  }
+
 
   .button-icon {
     padding: 5px;
