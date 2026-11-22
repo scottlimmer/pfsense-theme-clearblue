@@ -1,166 +1,170 @@
 @use "../variables";
 
 .navbar-inverse {
-    background-color: variables.$sidebar-bg;
+  background-color: variables.$sidebar-bg;
 
-    .navbar-nav > li > a {
-        border-bottom: 2px solid variables.$sidebar-bg;
-        color: variables.$sidebar-fg;
-    }
+  .navbar-nav > li > a {
+    border-bottom: 2px solid variables.$sidebar-bg;
+    color: variables.$sidebar-fg;
+  }
 
-    .nav > li > a:focus,
-    .nav > li > a:hover {
-        border-bottom-color: variables.$sidebar-fg;
-    }
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    border-bottom-color: variables.$sidebar-fg;
+  }
 
-    .navbar-nav > .open {
-        & > a,
-        & > a:focus,
-        & > a:hover {
-            background: variables.$sidebar-active-bg;
-        }
+  .navbar-nav > .open {
+    & > a,
+    & > a:focus,
+    & > a:hover {
+      background: variables.$sidebar-active-bg;
     }
+  }
 }
 
 .navbar-nav {
+  float: none;
+
+  & > li {
+    display: block;
     float: none;
 
-    & > li {
-        display: block;
-        float: none;
+    & > .dropdown-menu {
+      border: 0;
+      bottom: 0;
+      left: variables.$sidebar-width;
+      overflow-y: auto;
+      position: fixed;
+      top: 0;
 
-        & > .dropdown-menu {
-            border: 0;
-            bottom: 0;
-            left: 150px;
-            overflow-y: auto;
-            position: fixed;
-            top: 0;
+      /**
+          This is only present as Firefox doesn't consider the scrollbar
+          when determining width of a fixed position container.
+          https://bugzilla.mozilla.org/show_bug.cgi?id=764076
+          Setting the scrollbar-width to thin brings it under the width of
+          the gutter of the .dropdown-menu avoiding text cutoff / x-axis
+          overflow.
+          scrollbar-width property is also only supported by Firefox at 09-2023
+       */
+      scrollbar-width: thin;
 
-            /**
-                This is only present as Firefox doesn't consider the scrollbar
-                when determining width of a fixed position container.
-                https://bugzilla.mozilla.org/show_bug.cgi?id=764076
-                Setting the scrollbar-width to thin brings it under the width of
-                the gutter of the .dropdown-menu avoiding text cutoff / x-axis
-                overflow.
-                scrollbar-width property is also only supported by Firefox at 09-2023
-             */
-            scrollbar-width: thin;
-
-            li a {
-                padding: 10px 15px;
-            }
-        }
-
-        a {
-            padding: 10px variables.$gutter;
-        }
+      li a {
+        padding: 10px 15px;
+      }
     }
+
+    a {
+      padding: 10px variables.$gutter;
+    }
+  }
 }
 
 .caret {
-    border-width: 5px 5px 0;
-    position: absolute;
-    right: 15px;
-    top: 18px;
+  border-width: 5px 5px 0;
+  position: absolute;
+  right: 15px;
+  top: 18px;
 }
 
-.navbar-right {
-    float: none !important;
-    margin: 1em 0 0;
+#pf-navbar .navbar-right {
+  float: none !important;
+  margin: 1em 0 0;
 
-    .dropdown {
-        a {
-            width: 100%;
-            display: flex;
-            align-items: baseline;
+  .dropdown {
+    a {
+      width: 100%;
+      display: flex;
+      align-items: baseline;
 
-            &::before {
-                display: inline-block;
-                flex-grow: 1;
-            }
-        }
-
-        a[data-target="#notices"] {
-            &::before {
-                content: "Notices";
-            }
-
-            i.fa {
-                display: none;
-            }
-
-            .badge {
-                background-color: variables.$sidebar-badge-bg;
-                margin-right: -3px;
-            }
-        }
-
-        a[href$="logout"] {
-            &::before {
-                content: "Logout";
-            }
-        }
+      &::before {
+        display: inline-block;
+        flex-grow: 1;
+      }
     }
+
+    a[data-target="#notices"] {
+      &::before {
+        content: "Notices";
+      }
+
+      i.fa {
+        display: none;
+      }
+
+      .badge {
+        background-color: variables.$sidebar-badge-bg;
+        margin-right: -3px;
+      }
+    }
+
+    a[href$="logout"] {
+      &::before {
+        content: "Logout";
+      }
+    }
+  }
 }
 
 @media (width >= 768px) {
-    .navbar-inverse {
-        bottom: 0;
-        left: 0;
-        margin: 0;
-        position: fixed;
-        top: 0;
-        width: variables.$sidebar-width;
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+  }
 
-        .container {
-            box-shadow: none;
-            padding: 0;
-            width: auto;
-        }
+  .navbar-inverse {
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: variables.$sidebar-width;
 
-        & + .container {
-            margin: 0 variables.$gutter 0 variables.$sidebar-width + variables.$gutter;
-            max-width: calc(100% - variables.$sidebar-width - (variables.$gutter * 2)) !important;
-            padding: 15px 0;
-            width: auto;
-            z-index: 0;
-        }
+    .container {
+      box-shadow: none;
+      padding: 0;
+      width: auto;
     }
+
+    & + .container {
+      margin: 0 variables.$gutter 0 variables.$sidebar-width + variables.$gutter;
+      max-width: calc(100% - variables.$sidebar-width - (variables.$gutter * 2)) !important;
+      padding: 15px 0;
+      width: auto;
+      z-index: 0;
+    }
+  }
 }
 
 @media (width <= 767px) {
-    .navbar-inverse {
-        & + .container {
-            margin-top: 70px;
-        }
-
-        .navbar-toggle {
-            border-color: transparent;
-            margin-top: 12px;
-        }
-
-        .navbar-nav .open .dropdown-menu > li {
-            & > a {
-                border-bottom: 2px solid transparent;
-                color: #FFF;
-            }
-
-            & > a:focus,
-            & > a:hover {
-                border-color: #FFF;
-            }
-        }
+  .navbar-inverse {
+    & + .container {
+      margin-top: 70px;
     }
 
-    .navbar .navbar-collapse {
-        border-color: variables.$sidebar-active-bg;
-        box-shadow: none;
-        max-height: 500px;
-
-        > ul {
-            margin: 0 -15px;
-        }
+    .navbar-toggle {
+      border-color: transparent;
+      margin-top: 12px;
     }
+
+    .navbar-nav .open .dropdown-menu > li {
+      & > a {
+        border-bottom: 2px solid transparent;
+        color: #FFF;
+      }
+
+      & > a:focus,
+      & > a:hover {
+        border-color: #FFF;
+      }
+    }
+  }
+
+  .navbar .navbar-collapse {
+    border-color: variables.$sidebar-active-bg;
+    box-shadow: none;
+    max-height: 500px;
+
+    > ul {
+      margin: 0 -15px;
+    }
+  }
 }

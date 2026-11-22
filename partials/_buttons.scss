@@ -1,10 +1,37 @@
 @use "../variables";
 
-.btn .fa {
-    padding-right: 0.3em;
+.fa-solid,
+.fa-regular {
+  font-size: 16px;
+  padding: 0 2px;
 }
 
-.btn-primary {
+.btn {
+  & > .fa,
+  & > .fa-solid,
+  & > .fa-regular {
+    padding-right: 0.4em;
+    font-size: 14px;
+  }
+
+
+  .btn-primary {
     background-color: variables.$sidebar-bg;
     border-color: variables.$sidebar-bg;
+  }
+
+  .fa-info {
+    border-radius: 12px;
+    padding: 6px 10px;
+    background: #DCE8F3;
+    margin-right: 6px;
+  }
+
+  .button-icon {
+    padding: 5px;
+  }
+}
+
+.btn-sm {
+  font-size: 13px;
 }
