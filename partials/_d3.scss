@@ -1,0 +1,25 @@
+/* D3 Styles */
+
+svg {
+    display: block;
+}
+
+.d3-chart, .d3-chart svg {
+    margin: 0;
+    padding: 10px 0;
+    height: 445px;
+    width: 100%;
+}
+
+.traffic-widget-chart, .traffic-widget-chart svg {
+    padding: 0;
+    height: 250px;
+}
+
+.traffic-widget-chart:not(:last-child) {
+    border-bottom: 2px solid #ccc;
+}
+
+.nvtooltip > h3 {
+    font-size: 14px;
+}
