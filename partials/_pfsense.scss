@@ -1,3 +1,5 @@
+@use "../variables";
+
 /** pfSense specific overrides */
 
 #tpl, #tpr {
@@ -6,7 +8,7 @@
 
 #uptodate {
     .text-warning {
-        color: $sidebar-bg;
+        color: variables.$sidebar-bg;
     }
 }
 

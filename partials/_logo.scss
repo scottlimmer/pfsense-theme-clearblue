@@ -1,3 +1,5 @@
+@use "../variables";
+
 .navbar-header {
     display: block;
     float: none;
@@ -18,7 +20,7 @@
     }
 
     path {
-        fill: $logo-fg;
+        fill: variables.$logo-fg;
     }
 
     span {
@@ -27,7 +29,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
     .navbar > .container  .navbar-brand {
         &.factory {
             margin-left: 0;
@@ -35,7 +37,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .navbar-header {
         padding: 0;
     }

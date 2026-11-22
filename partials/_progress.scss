@@ -1,9 +1,11 @@
+@use "../variables";
+
 .progress {
-    background-color: $progress-bg;
+    background-color: variables.$progress-bg;
     margin-bottom: 0;
 
     & + span {
-        color: #FFFFFF;
+        color: #FFF;
         margin-top: -19px;
         padding-left: 0.3em;
         position: absolute;
@@ -11,6 +13,6 @@
 }
 
 .progress-bar {
-    background-color: $progress-fg;
+    background-color: variables.$progress-fg;
     padding: 2px 0;
 }

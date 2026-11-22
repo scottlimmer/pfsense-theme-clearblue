@@ -1,3 +1,5 @@
 /node_modules/
 /screenshots/
 /.idea/
+/.parcel-cache
+/.pnpm-store

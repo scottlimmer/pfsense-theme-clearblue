@@ -1,3 +1,5 @@
+@use "../variables";
+
 .panel {
     border: 0;
     box-shadow: none;
@@ -11,10 +13,10 @@
     }
 
     & > .panel-heading {
-        background-color: $panel-header-bg;
+        background-color: variables.$panel-header-bg;
         border: 0;
         border-radius: 0;
-        color: $panel-header-fg;
+        color: variables.$panel-header-fg;
         padding: 11px 15px 9px;
     }
 
@@ -35,8 +37,8 @@
         }
 
         .panel-heading {
-            background-color: $sub-panel-header-bg;
-            color: $panel-header-fg;
+            background-color: variables.$sub-panel-header-bg;
+            color: variables.$panel-header-fg;
         }
     }
 
@@ -46,9 +48,9 @@
         text-align: right;
 
         a, a:link, a:visited, a:hover, a:active {
-            background: $header-widget-bg;
+            background: variables.$header-widget-bg;
             border-radius: 3px;
-            color: $header-widget-fg;
+            color: variables.$header-widget-fg;
             display: inline-block;
             padding: 5px 0 4px;
             text-align: center;
@@ -57,7 +59,7 @@
         }
 
         a:hover, a:active {
-            background: $header-widget-hover-bg;
+            background: variables.$header-widget-hover-bg;
         }
 
     }

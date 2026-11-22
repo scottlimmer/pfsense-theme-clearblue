@@ -1,11 +1,13 @@
+@use "../variables";
+
 .nav > li > a {
-    color: $nav-button-fg;
+    color: variables.$nav-button-fg;
 }
 
 .nav > li > a:focus,
 .nav > li > a:hover {
-    background-color: $nav-button-bg;
-    color: $nav-button-fg;
+    background-color: variables.$nav-button-bg;
+    color: variables.$nav-button-fg;
 }
 
 .nav-pills {
@@ -20,23 +22,23 @@
         & a:focus,
         & a:hover {
             background-color: transparent;
-            border-bottom: 5px solid $nav-button-lowlight;
+            border-bottom: 5px solid variables.$nav-button-lowlight;
         }
     }
 
     & > li.active > a {
-        background-color: $nav-button-bg;
-        border-bottom-color: $nav-button-highlight;
-        color: $nav-button-fg;
+        background-color: variables.$nav-button-bg;
+        border-bottom-color: variables.$nav-button-highlight;
+        color: variables.$nav-button-fg;
         font-weight: bold;
     }
 
     & > li.active {
         & > a:focus,
         & > a:hover {
-            background-color: $nav-button-bg;
-            border-bottom: 5px solid $nav-button-lowlight;
-            color: $nav-button-fg;
+            background-color: variables.$nav-button-bg;
+            border-bottom: 5px solid variables.$nav-button-lowlight;
+            color: variables.$nav-button-fg;
         }
     }
 }

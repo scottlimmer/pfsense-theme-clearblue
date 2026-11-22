@@ -1,9 +1,11 @@
+@use "../variables";
+
 .bg-success {
-    background-color: $success-bg;
+    background-color: variables.$success-bg;
 }
 
 .bg-warning {
-    background-color: $warning-bg;
+    background-color: variables.$warning-bg;
 }
 
 .text-success {

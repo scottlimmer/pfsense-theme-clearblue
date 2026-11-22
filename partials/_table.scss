@@ -28,10 +28,10 @@ table[data-sortable].sortable-theme-bootstrap {
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > thead > tr > th {
-    border-top: 1px solid #EEEEEE;
+    border-top: 1px solid #EEE;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .table-responsive > .table > tbody > tr > td,
     .table-responsive > .table > tbody > tr > th,
     .table-responsive > .table > tfoot > tr > td,

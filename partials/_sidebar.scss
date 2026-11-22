@@ -1,21 +1,23 @@
+@use "../variables";
+
 .navbar-inverse {
-    background-color: $sidebar-bg;
+    background-color: variables.$sidebar-bg;
 
     .navbar-nav > li > a {
-        border-bottom: 2px solid $sidebar-bg;
-        color: $sidebar-fg;
+        border-bottom: 2px solid variables.$sidebar-bg;
+        color: variables.$sidebar-fg;
     }
 
     .nav > li > a:focus,
     .nav > li > a:hover {
-        border-bottom-color: $sidebar-fg;
+        border-bottom-color: variables.$sidebar-fg;
     }
 
     .navbar-nav > .open {
         & > a,
         & > a:focus,
         & > a:hover {
-            background: $sidebar-active-bg;
+            background: variables.$sidebar-active-bg;
         }
     }
 }
@@ -34,6 +36,7 @@
             overflow-y: auto;
             position: fixed;
             top: 0;
+
             /**
                 This is only present as Firefox doesn't consider the scrollbar
                 when determining width of a fixed position container.
@@ -51,13 +54,13 @@
         }
 
         a {
-            padding: 10px $gutter 10px;
+            padding: 10px variables.$gutter;
         }
     }
 }
 
 .caret {
-    border-width: 5px 5px 0 5px;
+    border-width: 5px 5px 0;
     position: absolute;
     right: 15px;
     top: 18px;
@@ -89,7 +92,7 @@
             }
 
             .badge {
-                background-color: $sidebar-badge-bg;
+                background-color: variables.$sidebar-badge-bg;
                 margin-right: -3px;
             }
         }
@@ -102,14 +105,14 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
     .navbar-inverse {
         bottom: 0;
         left: 0;
         margin: 0;
         position: fixed;
         top: 0;
-        width: $sidebar-width;
+        width: variables.$sidebar-width;
 
         .container {
             box-shadow: none;
@@ -118,8 +121,8 @@
         }
 
         & + .container {
-            margin: 0 $gutter 0 $sidebar-width + $gutter;
-            max-width: calc(100% - $sidebar-width - ($gutter * 2)) !important;
+            margin: 0 variables.$gutter 0 variables.$sidebar-width + variables.$gutter;
+            max-width: calc(100% - variables.$sidebar-width - (variables.$gutter * 2)) !important;
             padding: 15px 0;
             width: auto;
             z-index: 0;
@@ -127,7 +130,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .navbar-inverse {
         & + .container {
             margin-top: 70px;
@@ -141,18 +144,18 @@
         .navbar-nav .open .dropdown-menu > li {
             & > a {
                 border-bottom: 2px solid transparent;
-                color: #FFFFFF;
+                color: #FFF;
             }
 
             & > a:focus,
             & > a:hover {
-                border-color: #FFFFFF;
+                border-color: #FFF;
             }
         }
     }
 
     .navbar .navbar-collapse {
-        border-color: $sidebar-active-bg;
+        border-color: variables.$sidebar-active-bg;
         box-shadow: none;
         max-height: 500px;
 

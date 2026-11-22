@@ -1,5 +1,7 @@
+@use "../variables";
+
 .header {
-    background-color: $header-bg;
+    background-color: variables.$header-bg;
     box-shadow: none;
     margin-bottom: 20px;
 }
@@ -11,12 +13,14 @@
     padding: 10px 15px;
 
     & > li + li::before {
-        color: $link-fg;
+        color: variables.$link-fg;
         content: "\f054";
         display: inline-block;
-        padding: 0 10px 0 10px;
+        padding: 0 10px;
         vertical-align: middle;
-        font: normal normal normal 11px/1 "Font Awesome 5 Free";
+        font-variant: normal;
+        font-style: normal;
+        font-family: "Font Awesome 5 Free", sans-serif;
         font-weight: 900;
     }
 }
@@ -32,9 +36,9 @@
         list-style: none;
 
         a {
-            background: $header-widget-bg;
+            background: variables.$header-widget-bg;
             border-radius: 3px;
-            color: $header-widget-fg;
+            color: variables.$header-widget-fg;
             cursor: pointer;
             display: inline-block;
             margin: 0 2px;
@@ -44,12 +48,12 @@
         }
 
         a:hover, a:active {
-            background-color: $header-widget-hover-bg;
+            background-color: variables.$header-widget-hover-bg;
         }
     }
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
     .header {
         display: grid;
         grid-template-columns: auto min-content;

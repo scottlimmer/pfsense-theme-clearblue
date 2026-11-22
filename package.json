@@ -1,8 +1,16 @@
 {
-  "dependencies": {
-    "sass": "^1.99.0"
-  },
+  "packageManager": "pnpm@12.21.0",
   "scripts": {
-    "build-css": "sass clearblue.scss clearblue.css"
+    "build-css": "sass clearblue.scss clearblue.css",
+    "build-css-min": "sass clearblue.scss clearblue.css --style=compressed",
+    "lint-all": "stylelint '**/*.scss'",
+    "lint": "stylelint"
+  },
+  "devDependencies": {
+    "sass": "^1.108.2",
+    "sass-migrator": "^2.7.0",
+    "stylelint": "^18.1.0",
+    "stylelint-config-standard": "^41.1.0",
+    "stylelint-config-standard-scss": "^18.0.0"
   }
 }

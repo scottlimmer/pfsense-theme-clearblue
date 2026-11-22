@@ -1,33 +1,41 @@
 $gutter: 15px;
 $sidebar-width: 150px;
 
+/* Sidebar */
 $sidebar-bg: #2279C6;
-$sidebar-fg: #FFFFFF;
+$sidebar-fg: #FFF;
 $sidebar-active-bg: #003B6F;
 $sidebar-badge-bg: #82a5c4;
 
-$logo-fg: #FFFFFF;
+/* Foreground */
+$logo-fg: #FFF;
 $link-fg: #2279C6;
 
+/* Nav buttons */
 $nav-button-highlight: #FFD700;
-$nav-button-lowlight: #CCCCCC;
+$nav-button-lowlight: #CCC;
 $nav-button-fg: #1E1E1E;
 $nav-button-bg: #F4F4F4;
 
+/* Alerts */
 $warning-bg: #FFF2AB;
 $success-bg: #C2E683;
 
+/* Panels */
 $panel-header-bg: #E4E4E4;
-$panel-header-fg: #333333;
+$panel-header-fg: #333;
 $sub-panel-header-bg: #F2F2F2;
 
-$header-link-fg: #333333;
-$header-widget-fg: #FFFFFF;
-$header-widget-bg: #888888;
+/* Header */
+$header-link-fg: #333;
+$header-widget-fg: #FFF;
+$header-widget-bg: #888;
 $header-widget-hover-bg: #2279C6;
 
+/* Backgrounds */
 $header-bg: #F4F4F4;
 $footer-bg: #F4F4F4;
 
-$progress-bg: #888888;
+/* Progress bars */
+$progress-bg: #888;
 $progress-fg: #2279C6;

@@ -1,0 +1,46 @@
+name: Compile SCSS
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  compile-and-commit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/setup@v3
+        with:
+          runtime: node@lts
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Compile minified CSS
+        run: pnpm run build-css-min
+
+      - name: Commit generated CSS
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add clearblue.css clearblue.css.map
+
+          if git diff --cached --quiet; then
+            echo "No CSS changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: compile minified css [skip ci]"
+          git push
